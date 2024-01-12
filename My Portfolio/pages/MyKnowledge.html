@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/mainpageportfolio.css">
+    
+    <!--getting font-awesome to style from cdnjs.com-->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	
+	<!--getting googlefonts-->
+	
+	<link href='https://fonts.googleapis.com/css?family=Beau Rivage' rel='stylesheet'>
+	
+	
+<title>STEPHY'S PORTFOLIO</title>
+    <style>
+img {
+  border-radius: 50%;
+    animation: none;
+	
+    
+}
+</style>
+	
+
+    </head>
+    <body>
+    
+    <div class="top-menu">
+        <img id="logo1" src="/Media/stephylogo.png" class="left"/>
+		<ul >
+            <li><a href="/pages/MyKnowledge.html">MyKnowledge</a></li>
+            <li><a href="/pages/MyExperince.html">MyExperience</a></li>
+			<li><a>MyWork
+                <i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-menu">
+                                 <ul>
+            <li><a href="/pages/Projects.html">Projects</a></li>
+            <li><a href="https://medium.com/@stephy.SD99">Blog</a></li>
+            <li><a href="https://public.tableau.com/app/profile/stephy8784/vizzes">DashBoards</a></li>
+            
+                </ul>
+                </div>                    
+            </li>
+            <li><a href="/pages/Mycontact.html">Contact</a></li>
+        
+        
+        </ul>
+		
+        <h1 class="logo" style="text-align:left;">My 
+            <span>
+              Portfolio</span>
+        </h1>
+        
+        
+        
+        <h1 ><a href="/pages/MyPortfolio.html" style='color: gold'><i class='fa fa-home' style='color: gold'></i></a></h1>
+        </div>
+		
+		<video autoplay muted loop id="myVideo">
+  <source src="../Media/videobackground.mp4" type="video/mp4">
+  
+</video>
+ <div id="title" style='color: black'><h3><ins><i class='fa fa-gears'></i>
+
+Technical skills: </ins></h3></div>
+		
+		<!--internal styling-->
+        <style>
+table, td ,th{
+  border: 5px solid gold;
+  border-collapse: collapse;
+}
+            tr:hover {
+            color: darkgreen;}
+</style>
+<body>
+	
+	<!-- creating a form to add in the skills online in html page-->
+	
+	<form method="POST" name="textinput">
+	<div id="data">
+		<b><input type="text" id="SKILLTITLE" placeholder="Skill title..."></b>
+		<input type="text" id="SKILLSET" placeholder="Skill sets...">
+		<input id="skillbtn" type="button" name="submit" value="Submit Skill" onclick="addskill();" >
+		</div>
+	
+	<!--Adding table for the skills-->
+	
+<div class="table">
+<table id="tb1" style="width:80%">
+  <tr>
+	  <th style='color: black'><b>SKILL TITLE</b></th>
+	  <th style='color: black'><b>SKILL SET</b></th>
+	</tr>
+  <tr>
+      <td><b>Programming Languages </b></td>
+    <td>Java,J2EE, JBehave,SQL,Python,JSP/Servlets,HTML,JavaScript</td>
+    
+  </tr>
+  <tr>
+     <td><b>Testing Tools</b></td>
+    <td>Selenium,Seetest,Appium,HPQC,RESTfulservices, Postman API</td>
+    
+  </tr>
+    <tr>
+     <td><b>CI/CD </b></td>
+    <td>Jenkins, Bamboo</td>
+    
+  </tr>
+    <tr>
+     <td><b>Database</b></td>
+    <td>MySQL Server & MYSQL Workbench</td>
+    
+  </tr>
+    <tr>
+     <td><b>Build Automation Tools </b></td>
+    <td>Apache Maven, Apache Tomcat</td>
+    
+  </tr>
+    <tr>
+     <td><b>Defect Management System </b></td>
+    <td>Jira & Bugzilla</td>
+    
+  </tr>
+    <tr>
+     <td><b>PM Tools </b></td>
+    <td>Microsoft Office, Visio, Jira,  ZohoProjects, Git, SVN, Eclipse IDE, Jupyter Notebook, PyCharm</td>
+  </tr>
+    <tr>
+     <td><b>Management & Analysis </b></td>
+    <td>Agile Project Management, Project Planning & Execution, Release Management,<br>
+            Stakeholder Engagement, Test Management, Risk Assessment, Business Documentation, Data Analysis  </td>
+    
+  </tr>
+    <tr>
+     <td><b>OS </b></td>
+    <td>Windows, Linux</td>
+    
+  </tr>
+     <tr>
+     <td><b>Machine Learning Libraries </b></td>
+    <td>NumPy, Pandas, seaborn, matplotlib, Scikit-learn </td>
+    
+  </tr>
+    
+     <tr>
+     <td><b>Analytics tools </b></td>
+    <td>Tableau, Quicksight, Microsoft Excel </td>
+    
+  </tr>
+     <tr>
+     <td><b>Cloud Technologies </b></td>
+    <td>AWS</td>
+    
+  </tr>
+</table>
+    </div>
+	</form>	
+	
+	<!--internal javascript to create element and add it in the row while user inputs the data-->
+	
+	
+	<script type="text/javascript">
+		
+		function addskill(){
+	
+	
+	let SKILLTITLE=document.textinput.SKILLTITLE.value.bold();
+	let SKILLSET=document.textinput.SKILLSET.value;
+	
+	
+	
+	let tr=document.createElement('tr');
+	
+	
+	let td1=tr.appendChild(document.createElement('td'));
+	let td2=tr.appendChild(document.createElement('td'));
+	
+	td1.innerHTML=SKILLTITLE;
+	td2.innerHTML=SKILLSET;
+	
+	document.getElementById("tb1").appendChild(tr);
+		
+}
+		</script>
+	
+	<!--footer added-->
+	
+	<footer class="footer">
+  
+      <h6 style="text-align:center;" >Copyright &copy; 2023 designed by stephy</h6>
+    
+</footer>
+	
+	</body>
